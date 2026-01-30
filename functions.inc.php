@@ -25,6 +25,8 @@ function outputPostRow(
     $post_reviewsRating,
     $post_excerpt
 ) {
+
+
     echo "<div class=\"post\">";
 
     generateLink(
