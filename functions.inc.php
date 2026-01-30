@@ -1,6 +1,4 @@
 <?php
-include 'data.inc.php';
-include 'functions.inc.php';
 
 function generateLink($url, $label) {
     echo "<a href=\"$url\">$label</a>";
@@ -27,18 +25,22 @@ function outputPostRow(
     $post_reviewsRating,
     $post_excerpt
 ) {
-    echo "<div class='post'>";
+    echo "<div class=\"post\">";
 
-    generateLink($post_link, "<img src='images/$post_thumb' alt='$post_title'>");
+    generateLink(
+        $post_link,
+        "<img src=\"images/$post_thumb\" alt=\"$post_title\">"
+    );
 
     echo "<h2>$post_title</h2>";
-    
+
     echo "<div class=\"post-meta\">";
     echo "Posted by ";
     generateLink($post_userLink, $post_userName);
     echo " on $post_date";
+    echo "</div>";
 
-    echo "<br>";
+    echo "<div class=\"post-rating\">";
     outputStars($post_reviewsRating);
     echo " $post_reviewsNum Reviews";
     echo "</div>";
@@ -50,6 +52,6 @@ function outputPostRow(
     echo "</div>";
 }
 
-
 ?>
+
 
