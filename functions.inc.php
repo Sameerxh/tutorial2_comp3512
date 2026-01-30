@@ -32,7 +32,8 @@ function outputPostRow(
     generateLink($post_link, "<img src='images/$post_thumb' alt='$post_title'>");
 
     echo "<h2>$post_title</h2>";
-
+    
+    echo "<div class=\"post-meta\">";
     echo "Posted by ";
     generateLink($post_userLink, $post_userName);
     echo " on $post_date";
@@ -40,6 +41,7 @@ function outputPostRow(
     echo "<br>";
     outputStars($post_reviewsRating);
     echo " $post_reviewsNum Reviews";
+    echo "</div>";
 
     echo "<p>$post_excerpt</p>";
 
