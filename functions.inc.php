@@ -6,11 +6,11 @@ function generateLink($url, $label) {
 
 function outputStars($rating) {
     for ($i = 0; $i < $rating; $i++) {
-        echo "<img src=\"images/star-gold.png\" alt=\"gold star\">";
+        echo "<img src=\"images/star-gold.svg\" alt=\"gold star\">";
     }
 
     for ($i = $rating; $i < 5; $i++) {
-        echo "<img src=\"images/star-white.png\" alt=\"white star\">";
+        echo "<img src=\"images/star-white.svg\" alt=\"white star\">";
     }
 }
 
